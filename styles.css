@@ -6,3 +6,30 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+:root {
+  --light-yellow:#f7e4bf;
+  --light-blue: #78a7c6;
+  --dark-blue: #134d71;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#grad {
+  background-image: linear-gradient(#134d71, #f7e4bf);
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+img {
+  width: 200px;
+}
