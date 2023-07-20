@@ -38,6 +38,11 @@ var mantraRadioBtn = document.querySelector("#mantra-radio")
 var receiveMessageBtn = document.querySelector(".receive-message-btn")
 var displayedMessage = document.querySelector(".random-result-message")
 // event listeners
+receiveMessageBtn.addEventListener("click", function () {
+  getRandomMessage()
+  displayMessage()
+})
+
 
 // functions
 function getRandomMessage() {
@@ -49,6 +54,13 @@ function getRandomMessage() {
     return mantras[randMantraIndex]
   }
 }
+
+function displayMessage() {
+  var randMessage = getRandomMessage()
+  displayedMessage.innerHTML = randMessage
+}
+
+
 
 /**
  - querySelect the radio buttons
