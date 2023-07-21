@@ -3,7 +3,7 @@ var affirmations = [
   "I believe I can be all that I want to be.",
   "I am in the process of becoming the best version of myself.",
   "I have the freedom & power to create the life I desire.",
-  "I choose to be kind to myself and love myself unconditionally.",
+  "I choose to be kind to myself and love myself unconditionally",
   "My possibilities are endless.",
   "I am worthy of my dreams.",
   "I am enough.",
@@ -65,20 +65,11 @@ function hideElement(element) {
 element.classList.add("hidden")
 }
 
-/**
- 
- array.indexOf(messageToDelete variable)
-event.target 
-find innerHTML of message. Set to a variable e.g. messageToDelete. 
- use that variable to check against the array.
-splice(i, 1) that 
+function showElement(element) {
+  element.classList.remove("hidden")
+}
 
- - querySelect the radio buttons
- - querySelect the receive message button
- - create an eventListener with a function that fires. 
- - use if else statement based on which radio button was checked to generate a random affirmation or mantra 
- - write a new function to update the DOM so the message is displayed in the browser
- */
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
