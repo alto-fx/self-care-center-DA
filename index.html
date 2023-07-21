@@ -14,19 +14,22 @@
   <section class="upper-pane">
     <div class="box-1">
       <div class="radio-btn-1">
-        <input type="radio" name="affirmation" id="affirmation-radio">
+        <input type="radio" name="message-type" id="affirmation-radio" value="affirmation">
         <label for="affirmation-radio">affirmation</label>
       </div>
       <div class="radio-btn-2">
-        <input type="radio" name="mantra" id="mantra-radio">
+        <input type="radio" name="message-type" id="mantra-radio" value="mantra">
         <label for="mantra-radio">mantra</label>
       </div>
     </div>
-    <button class="recieve-message-btn">Receive Message</button>
+    <button class="receive-message-btn">Receive Message</button>
   </section>
   <section class="lower-pane">
     <div class="box-2">
-      <p class="random-result-message hidden">Results Message</p>
+      <p class="random-result-message"></p>
+      <div class="remove-message">
+        <button class="remove-message-btn">I don't like this message</button>
+      </div>
       <div class="default-image">
         <img class="meditation-icon" src="assets/meditate.svg" alt="meditating person icon">
       </div>
