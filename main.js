@@ -37,12 +37,13 @@ var affirmationRadioBtn = document.querySelector("#affirmation-radio")
 var mantraRadioBtn = document.querySelector("#mantra-radio")
 var receiveMessageBtn = document.querySelector(".receive-message-btn")
 var displayedMessage = document.querySelector(".random-result-message")
+var meditationIcon = document.querySelector(".meditation-icon")
 // event listeners
 receiveMessageBtn.addEventListener("click", function () {
   getRandomMessage()
   displayMessage()
+  hideElement(meditationIcon)
 })
-
 
 // functions
 function getRandomMessage() {
@@ -60,15 +61,23 @@ function displayMessage() {
   displayedMessage.innerHTML = randMessage
 }
 
-
+function hideElement(element) {
+element.classList.add("hidden")
+}
 
 /**
+ 
+ array.indexOf(messageToDelete variable)
+event.target 
+find innerHTML of message. Set to a variable e.g. messageToDelete. 
+ use that variable to check against the array.
+splice(i, 1) that 
+
  - querySelect the radio buttons
  - querySelect the receive message button
  - create an eventListener with a function that fires. 
  - use if else statement based on which radio button was checked to generate a random affirmation or mantra 
  - write a new function to update the DOM so the message is displayed in the browser
- 
  */
 
 function getRandomIndex(array) {
