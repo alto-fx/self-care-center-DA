@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  <title>>Self Care Center</title>
+  <title>Self Care Center</title>
 </head>
-<body id="grad">
-  <h1 class="header-title">Self Care Center</h1>
-  <main class="main-container">
-    <h2>Which type of message?</h2>
-    <section class="input-card">
-      <input type="radio" id="option1" name="affirmation">
-      <label for="option1">affirmation</label>
-      <input type="radio" id="option2" name="mantra">
-      <label for="option2">mantra</label>
-      <div>
-        <button>Receive Message</button>
+<body class="gradient">
+  <h1 class="main-title">✨Self Care Center✨</h1>
+  <h2 class="type-of-message">Which type of message?</h2>
+  <section class="upper-pane">
+    <div class="box-1">
+      <div class="radio-btn-1">
+        <input type="radio" name="affirmation" id="affirmation-radio">
+        <label for="affirmation-radio">affirmation</label>
       </div>
-    </section>
-    <section class="results-card">
-      <img src="assets/meditate.svg">
-    </section>
-  </main>
+      <div class="radio-btn-2">
+        <input type="radio" name="mantra" id="mantra-radio">
+        <label for="mantra-radio">mantra</label>
+      </div>
+    </div>
+    <button class="recieve-message-btn">Receive Message</button>
+  </section>
+  <section class="lower-pane">
+    <div class="box-2">
+      <p class="random-result-message hidden">Results Message</p>
+      <div class="default-image">
+        <img class="meditation-icon" src="assets/meditate.svg" alt="meditating person icon">
+      </div>
+    </div>
+  </section>
   <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
