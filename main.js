@@ -3,7 +3,7 @@ var affirmations = [
   "I believe I can be all that I want to be.",
   "I am in the process of becoming the best version of myself.",
   "I have the freedom & power to create the life I desire.",
-  "I choose to be kind to myself and love myself unconditionally.",
+  "I choose to be kind to myself and love myself unconditionally",
   "My possibilities are endless.",
   "I am worthy of my dreams.",
   "I am enough.",
@@ -38,11 +38,18 @@ var mantraRadioBtn = document.querySelector("#mantra-radio")
 var receiveMessageBtn = document.querySelector(".receive-message-btn")
 var displayedMessage = document.querySelector(".random-result-message")
 var meditationIcon = document.querySelector(".meditation-icon")
+var removeMessageBtn = document.querySelector(".remove-message-btn")
 // event listeners
 receiveMessageBtn.addEventListener("click", function () {
   getRandomMessage()
   displayMessage()
   hideElement(meditationIcon)
+  showElement(removeMessageBtn)
+})
+
+removeMessageBtn.addEventListener("click", function(){
+  removeMessageFromList()
+  renderRemovedMessage()
 })
 
 // functions
@@ -59,26 +66,51 @@ function getRandomMessage() {
 function displayMessage() {
   var randMessage = getRandomMessage()
   displayedMessage.innerHTML = randMessage
+  console.log(randMessage)
 }
 
 function hideElement(element) {
 element.classList.add("hidden")
 }
 
+function showElement(element) {
+  element.classList.remove("hidden")
+}
+
+function removeMessageFromList(message) { 
+  var indexOfAffirmation = affirmations.indexOf(message)
+  var indexOfMantra = mantras.indexOf(message)
+  if (indexOfAffirmation !== -1) {
+    affirmations.splice(indexOfAffirmation, 1)
+  }
+  if (indexOfMantra !== -1) {
+    mantras.splice(indexOfMantra, 1)
+  }
+}
+
+function renderRemovedMessage() {
+  var messageToRemove = displayedMessage.innerHTML
+  removeMessageFromList(messageToRemove)
+  displayMessage()
+}
+
 /**
+ * Add the ability to delete a message (ie: when a message shows up, show a button that says “I don’t like this message” (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the message has been removed.
+ * 
+ * 
+ * querySelect button with a class 'remove-message-btn'
+ * add eventListener to button
+ * create anon function that when fires, removes the displayed message from the mantra or affirmation array. 
+ * update the DOM
  
  array.indexOf(messageToDelete variable)
 event.target 
 find innerHTML of message. Set to a variable e.g. messageToDelete. 
  use that variable to check against the array.
 splice(i, 1) that 
-
- - querySelect the radio buttons
- - querySelect the receive message button
- - create an eventListener with a function that fires. 
- - use if else statement based on which radio button was checked to generate a random affirmation or mantra 
- - write a new function to update the DOM so the message is displayed in the browser
  */
+
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
