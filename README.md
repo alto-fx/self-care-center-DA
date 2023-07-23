@@ -23,7 +23,7 @@
 - My learning goal was not only to create a landing page identical to the mockup using HTML and CSS, but also to add functionality to the radio inputs and buttons with JavaScript and DOM manipulation. I wanted to use and grow my understanding of functions that rely on a user event in the browser. I also wanted to get more practice using git commands, pushing code into the remote repo and pulling it back down to my local machine.
 
 ### Wins + Challenges:
-- I refactored my HTML to be more semantic and while also using div containers for styling.
+- I refactored my HTML to be more semantic while also using div containers for styling.
 - In my CSS file, I stored the colors used throughout the website in CSS variables with semantic identifiers so they can easily be referenced or globally updated.
 - Although I revisited the Flexbox Froggy game before beginning this project, achieving the desired layout of buttons was challenging. Paying attention to parent/child relationships between HTML elements and reading up on the CSS box model helped my understanding.
 - I am continuing to gain familiarity with using MDN Docs as a tool for research and troubleshooting.
