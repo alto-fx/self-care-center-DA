@@ -1,9 +1,9 @@
 :root {
-  --light-yellow: #f7e4bf;
-  --light-blue: #78a7c6;
-  --dark-blue: #134d71;
-  --white: #ffffff;
-  --black: #000000;
+  --gradient-yellow: #f7e4bf;
+  --gradient-light-blue: #78a7c6;
+  --button: #134d71;
+  --background-and-main-text: #ffffff;
+  --message-text: #000000;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
 }
 
 .heading {
-  color: #ffffff;
+  color: var(--background-and-main-text)
 }
 
 .self-care-center {
@@ -38,14 +38,8 @@ body {
   margin-bottom: 10px;
 }
 
-/* .upper-pane {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 .box-1 {
-  background-color: #ffffff;
+  background-color: var(--background-and-main-text);
   height: 14vh;
   width: 40vw;
   border-radius: 10px;
@@ -80,12 +74,12 @@ body {
 .receive-message-btn,
 .remove-message-btn {
   font-size: 1.1em;
-  color: #ffffff;
-  background-color: #134d71;
+  color: var(--background-and-main-text);
+  background-color: var(--button);
   border-radius: 5px;
   border: none;
   width: 200px;
-  padding: 2%;
+  padding: 4px;
   margin: 5px;
 }
 
@@ -94,7 +88,7 @@ body {
 }
 
 .box-2 {
-  background-color: white;
+  background-color: var(--background-and-main-text);
   border-radius: 10px;
   height: 20vh;
   width: 60vw;
@@ -110,8 +104,9 @@ body {
 }
 
 .random-result-message {
+  color: var(--message-text);
   font-size: 1.4em;
-  margin-top: 6%;
+  margin-top: 5px;
   margin-bottom: 3%;
 }
 
