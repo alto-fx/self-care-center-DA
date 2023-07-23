@@ -1,51 +1,31 @@
-# Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
 # Self-Care Center 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+This website allows users to receive a mantra or affirmation. After selecting the type of message and clicking a button, a random mantra or affirmation message is displayed to the user. Additionally, users can remove a message if they do not like it and that message will not be displayed to the user again. If a user removes all of the messages, they will be alerted to refresh the page in order to receive a message again.
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+- git clone this repo to your local machine
+- cd into that directory
+- git open index.html to open the browser
+- Get inspired by affirmations and mantras.
+
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+<img width="1468" alt="Screenshot 2023-07-23 at 12 32 28 PM" src="https://user-images.githubusercontent.com/130494366/255436972-7b16f4a6-4438-4b4f-b16d-909a7d3ac917.png">
+
+![Self_Care_App_Preview_04](https://user-images.githubusercontent.com/130494366/255437012-b0fcc028-6afc-4f8a-884e-a0da9f990641.gif)
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-
+I spent 20 hours working on this project. I am in week three of Mod 1.
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+[Devin Altobello] (https://github.com/alto-fx)
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+My learning goal was not only to create a landing page identical to the mockup using HTML and CSS, but also to add functionality to the radio inputs and buttons with JavaScript and DOM manipulation. I wanted to use and grow my understanding of functions that rely on a user event in the browser. I also wanted to get more practice using git commands, pushing code into the remote repo and pulling it back down to my local machine.
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+- I refactored my HTML to be more semantic and while also using div containers for styling.
+- In my CSS file, I stored the colors used throughout the website in CSS variables with semantic identifiers so they can easily be referenced or globally updated.
+- Although I revisited the Flexbox Froggy game before beginning this project, achieving the desired layout of buttons was challenging. Paying attention to parent/child relationships between HTML elements and reading up on the CSS box model helped my understanding.
+- I am continuing to gain familiarity with using MDN Docs as a tool for research and troubleshooting.
+
