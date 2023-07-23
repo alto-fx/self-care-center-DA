@@ -22,6 +22,7 @@ black - #000000;
 
 .gradient {
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-attachment: fixed;
 }
 
 body {
@@ -36,23 +37,19 @@ h1 {
   color: #ffffff;
   padding-top: 2%;
   padding-bottom: 5%;
-
 }
 
 h2 {
   font-size: 1.6em;
   color: #ffffff;
   margin-bottom: 10px;
-
 }
 
-/* .upper-pane {
+.upper-pane {
   display: flex;
-  height: 30%;
-  width: 60%;
-  align-items: center;
   flex-direction: column;
-} */
+  align-items: center;
+}
 
 .box-1 {
   background-color: #ffffff;
@@ -60,34 +57,40 @@ h2 {
   width: 40vw;
   border-radius: 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
   margin-bottom: 25%;
+  flex-wrap: wrap;
 }
 
-.radio-btn-1, 
+.receive-message-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.radio-btn-1,
 .radio-btn-2 {
+  height: 50%;
+  width: 50%;
   font-style: italic;
   font-size: 1.2em;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-
-/* .lower-pane {
-  display: flex;
-  height: 30%;
-  width: 60%;
-} */
 
 .box-2 {
   background-color: white;
-    border-radius: 10px;
-    height: 20vh;
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  border-radius: 10px;
+  height: 20vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .meditation-icon {
@@ -98,7 +101,7 @@ h2 {
 .receive-message-btn,
 .remove-message-btn {
   font-size: 1.1em;
-  color:  #ffffff;
+  color: #ffffff;
   background-color: #134d71;
   border-radius: 5px;
   border: none;
@@ -110,6 +113,7 @@ h2 {
 .remove-message-btn {
   margin-bottom: 12%;
 }
+
 .random-result-message {
   font-size: 1.4em;
   margin-top: 6%;
