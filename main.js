@@ -39,27 +39,40 @@ var receiveMessageBtn = document.querySelector(".receive-message-btn")
 var displayedMessage = document.querySelector(".random-result-message")
 var meditationIcon = document.querySelector(".meditation-icon")
 var removeMessageBtn = document.querySelector(".remove-message-btn")
+
 // event listeners
 receiveMessageBtn.addEventListener("click", function () {
   getRandomMessage()
   displayMessage()
   hideElement(meditationIcon)
   showElement(removeMessageBtn)
+  checkIfMessageAvailable()
 })
 
 removeMessageBtn.addEventListener("click", function(){
   removeMessageFromList()
   renderRemovedMessage()
+  checkIfMessageAvailable()
 })
 
 // functions
 function getRandomMessage() {
   var randAffirmationIndex = getRandomIndex(affirmations)
   var randMantraIndex = getRandomIndex(mantras)
-  if (affirmationRadioBtn.checked) {
+  if (affirmationRadioBtn.checked) { 
     return affirmations[randAffirmationIndex]
   } else if (mantraRadioBtn.checked) {
     return mantras[randMantraIndex]
+  }
+}
+
+function checkIfMessageAvailable() {
+  if (affirmationRadioBtn.checked && affirmations.length === 0) {
+    alert("Please refresh the page to receive a new affirmation message.")
+    return
+  } else if (mantraRadioBtn.checked && mantras.length === 0) {
+    alert("Please refresh the page to receive a new mantra message.")
+    return
   }
 }
 
@@ -93,24 +106,6 @@ function renderRemovedMessage() {
   removeMessageFromList(messageToRemove)
   displayMessage()
 }
-
-/**
- * Add the ability to delete a message (ie: when a message shows up, show a button that says “I don’t like this message” (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the message has been removed.
- * 
- * 
- * querySelect button with a class 'remove-message-btn'
- * add eventListener to button
- * create anon function that when fires, removes the displayed message from the mantra or affirmation array. 
- * update the DOM
- 
- array.indexOf(messageToDelete variable)
-event.target 
-find innerHTML of message. Set to a variable e.g. messageToDelete. 
- use that variable to check against the array.
-splice(i, 1) that 
- */
-
-
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
